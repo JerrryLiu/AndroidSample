@@ -1,2 +1,3 @@
-include ':app'
+include ':app', ':opencv4java'
 rootProject.name='OpenCvSample'
+include ':openCVLibrary410'
