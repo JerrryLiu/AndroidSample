@@ -23,6 +23,7 @@ Java_com_example_opencvsample_MainActivity_bitmap2Gray(JNIEnv *env,
         return 0;
     }
 
+    // Mat imgData 类似Java 中 int a ; 定义变量
     Mat imgData(h, w, CV_8UC4, (unsigned char*)cbuf);
     // 注意，Android的Bitmap是ARGB四通道,而不是RGB三通道
     cvtColor(imgData,imgData,CV_BGRA2GRAY);
