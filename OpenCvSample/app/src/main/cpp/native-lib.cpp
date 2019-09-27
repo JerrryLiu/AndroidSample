@@ -24,6 +24,7 @@ Java_com_example_opencvsample_MainActivity_bitmap2Gray(JNIEnv *env,
     }
 
     // Mat imgData 类似Java 中 int a ; 定义变量
+    // CV_8UC4 ，8 -> 图片深度值，一个像素占用内存大小，4-> 通道数量ARGB
     Mat imgData(h, w, CV_8UC4, (unsigned char*)cbuf);
     // 注意，Android的Bitmap是ARGB四通道,而不是RGB三通道
     cvtColor(imgData,imgData,CV_BGRA2GRAY);
